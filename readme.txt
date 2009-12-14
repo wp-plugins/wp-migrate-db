@@ -2,7 +2,7 @@
 Contributors: bradt
 Tags: database, migrate, backup, mysql
 Requires at least: 2.0.3
-Tested up to: 2.7.1
+Tested up to: 2.8
 Stable tag: 0.2.1
 Last Updated: 2009-03-20
 
