@@ -4,9 +4,8 @@ Tags: database, migrate, backup, mysql
 Requires at least: 2.0.3
 Tested up to: 3.2
 Stable tag: trunk
-Last Updated: 2009-03-20
 
-WP Migrate DB exports your database, does a find and replace on URLs and file paths, then allows you to save it to your computer.
+Exports your database, does a find and replace on URLs and file paths, then allows you to save it to your computer.
 
 == Description ==
 
