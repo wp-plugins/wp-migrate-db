@@ -4,7 +4,7 @@ Plugin Name: WP-Migrate-DB
 Plugin URI: http://wordpress.org/extend/plugins/wp-migrate-db/
 Description: Exports your database as a MySQL data dump (much like phpMyAdmin), does a find and replace on URLs and file paths, then allows you to save it to your computer.
 Author: Brad Touesnard
-Version: 0.2.1
+Version: 0.2.2
 Author URI: http://bradt.ca/
 */
 
@@ -562,7 +562,7 @@ class WP_Migrate_DB {
     function admin_head() {
         $url = admin_url('tools.php?page=wp-migrate-db&download=true');
         ?>
-        <meta http-equiv="refresh" content="5;url=<?php echo $url; ?>"/>
+        <meta http-equiv="refresh" content="1;url=<?php echo $url; ?>"/>
         <?php
     }
 }
@@ -573,12 +573,14 @@ $wpmdb = new WP_Migrate_DB;
 if (is_admin()) {
     add_action('admin_menu', array($wpmdb, 'admin_menu'));
 
-    if (isset($_POST['savefile']) && $_POST['savefile']) {
-        add_action('admin_head-tools_page_wp-migrate-db', array($wpmdb, 'admin_head'));
-    }
-
-    if (isset($_GET['download']) && $_GET['download']) {
-        add_action('init', array($wpmdb, 'download_file'));
-    }
+	if (isset($_GET['page']) && $_GET['page'] == 'wp-migrate-db') {
+		if (isset($_POST['savefile']) && $_POST['savefile']) {
+			add_action('admin_head-tools_page_wp-migrate-db', array($wpmdb, 'admin_head'));
+		}
+	
+		if (isset($_GET['download']) && $_GET['download']) {
+			add_action('init', array($wpmdb, 'download_file'));
+		}
+	}
 }
 ?>

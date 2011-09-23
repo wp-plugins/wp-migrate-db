@@ -1,9 +1,10 @@
 === WP Migrate DB ===
 Contributors: bradt
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5VPMGLLK94XJC
 Tags: database, migrate, backup, mysql
 Requires at least: 2.0.3
 Tested up to: 3.2
-Stable tag: trunk
+Stable tag: 0.2.2
 
 Exports your database, does a find and replace on URLs and file paths, then allows you to save it to your computer.
 
@@ -30,17 +31,23 @@ Enjoy!
 1. Main screen
 2. Saving the exported database
 
-== Release Notes ==
+== Changelog ==
 
-**0.2.1 - 2009-12-13**
+= 0.2.2 - 2011-09-23 =
+* Bug fix: [Breaks Export](http://wordpress.org/support/topic/plugin-wp-migrate-db-breaks-export?replies=1)
 
+= 0.2.1 - 2009-12-13 =
 * Moved to Wordpress.org hosting
 
-**0.2 - 2009-04-03**
-
+= 0.2 - 2009-04-03 =
 * Moved menu link from "Settings" to "Tools"
 * The random string of characters no longer appears in the filename on save.
 
-**0.1 - 2009-03-20**
-
+= 0.1 - 2009-03-20 =
 * First release
+
+== Upgrade Notice ==
+
+= 0.2.2 =
+
+This version fixes a bug that breaks the WordPress core export feature. It is highly recommended that everyone upgrade.
