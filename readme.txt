@@ -3,7 +3,7 @@ Contributors: bradt
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5VPMGLLK94XJC
 Tags: database, migrate, backup, mysql
 Requires at least: 3.0
-Tested up to: 3.6
+Tested up to: 3.9
 Stable tag: 0.5
 License: GPLv2
 
